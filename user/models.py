@@ -20,7 +20,6 @@ class UserManager(BaseUserManager):
         return user
 
 
-
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(max_length=255,unique=True)
@@ -31,3 +30,7 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class Client(models.Model):
+    user = models.OneToOneField(CustomUser,on_delete=models.CASCADE)
