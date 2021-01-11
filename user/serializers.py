@@ -6,12 +6,13 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
         fields = ['email','password']
-        extra_kwargs = {'password':{'write_only':True,}}
+        extra_kwargs = {'password':{'write_only':True,'style':{'input_type': 'password'}}}
 
     def create(self, validated_data):
         """Create a user and return it"""
 
         return get_user_model().objects.create_user(**validated_data)
+
 
 
 class AuthTokenSerializer(serializers.Serializer):

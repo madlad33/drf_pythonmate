@@ -25,7 +25,7 @@ SECRET_KEY = 'lpf3b8t^prb*ei2(n-8b#b*(g8d-z@_c)88l@19d4-*p_@s)_v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["0c4992d4f89b.ngrok.io"]
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'user',
+    'form_hospital',
 ]
 
 MIDDLEWARE = [
