@@ -15,7 +15,7 @@ class ShiftViewSet(viewsets.ModelViewSet):
 
 
     def get_queryset(self):
-        """Return objects for the current aUthenticated users only!"""
+        """Return objects for the current authenticated users only"""
         return self.queryset.filter(user=self.request.user)
 
     def perform_create(self, serializer):
